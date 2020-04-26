@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Automated Lift Control Panel</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style type="text/css">
+		.wrap-login100 {
+			background-color: #e1e1e1;
+		}
+		.lift_button {
+			padding: 25px;
+			margin-left: 20px;
+			margin-right: 20px;
+			border-radius: 45px;
+			box-shadow: 0px 8px 15px rgba(0.5, 0.5, 0.5, 0.5);
+			transition: all 0.3s ease 0s;
+			border: 1px solid black;
+			background: linear-gradient(to top right, #000000 -38%, #ffffff 100%);
+		}
+		.table td, .table th {
+			border: 0;
+		}
+		.bell {
+			background-image: url("images/bell.png") !important;
+			background-position: center;
+			padding: 35px;
+		}
+		.call {
+			background-image: url("images/call.png") !important;
+			background-position: center;
+			background-repeat: no-repeat;
+			padding: 35px;
+		}
+		.fan {
+			background-image: url("images/fan.png") !important;
+			background-position: center;
+			background-repeat: no-repeat;
+			padding: 35px;
+		}
+		.open {
+			background-image: url("images/open.png") !important;
+			background-position: center;
+			background-repeat: no-repeat;
+			padding: 35px;
+		}
+		.closed {
+			background-image: url("images/close.png") !important;
+			background-position: center;
+			background-repeat: no-repeat;
+			padding: 35px;
+		}
+		.stop_lift {
+			background-image: url("images/stop.png") !important;
+			background-position: center;
+			background-repeat: no-repeat;
+			padding: 35px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+		<form class="login100-form validate-form" action="" method="post">
+			<div class="container" style="text-align: center;">
+				<h4 style="margin-bottom: 30px; margin-top: -20px;">Welcome To Lift Control Panel</h4>
+				<table class="table">
+					<thead>
+					  <tr>
+					    <th style="text-align: center;">Origin Floor</th>
+					    <th style="text-align: center;">Destination Floor</th>
+					  </tr>
+					</thead>
+					<tbody style="text-align: center;">
+					  <tr>
+					    <td class="no-border"><input type="button" name="" value="1" class="lift_button btn btn-secondary"></td>
+					    <td class="no-border"><input type="button" name="" value="1" class="lift_button btn btn-secondary"></td>
+					  </tr>
+					  <tr>
+					    <td class="no-border"><input type="button" name="" value="2" class="lift_button btn btn-secondary"></td>
+					    <td class="no-border"><input type="button" name="" value="2" class="lift_button btn btn-secondary"></td>
+					  </tr>
+					  <tr>
+					    <td class="no-border"><input type="button" name="" value="3" class="lift_button btn btn-secondary"></td>
+					    <td class="no-border"><input type="button" name="" value="3" class="lift_button btn btn-secondary"></td>
+					  </tr>
+					  <tr>
+					    <td class="no-border"><input type="button" name="" value="4" class="lift_button btn btn-secondary"></td>
+					    <td class="no-border"><input type="button" name="" value="4" class="lift_button btn btn-secondary"></td>
+					  </tr>
+					</tbody>
+				</table>
+				<h5 style="margin-bottom: 20px; margin-top: 20px;">Utilities<h5><hr>
+				<table class="table" style="margin-left: -30px;">
+					<thead></thead>
+					<tbody style="text-align: center;">
+					  <tr>
+					    <td class="no-border"><input type="button" name="" class="lift_button btn btn-secondary bell"></td>
+					    <td class="no-border"><input type="button" name="" class="lift_button btn btn-secondary call"></td>
+					    <td class="no-border"><input type="button" name="" class="lift_button btn btn-secondary fan"></td>
+					   </tr>
+					   <tr>
+					    <td class="no-border"><input type="button" name="" class="lift_button btn btn-secondary open"></td>
+					    <td class="no-border"><input type="button" name="" class="lift_button btn btn-secondary closed"></td>
+					    <td class="no-border"><input type="button" name="" class="lift_button btn btn-secondary stop_lift"></td>
+					  </tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+	</div>
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

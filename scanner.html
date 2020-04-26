@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Automated Lift QR Scanner</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="https://dmla.github.io/jsqrcode/src/qr_packed.js"></script>
+	<style type="text/css">
+		input, label {
+			vertical-align:middle;
+		}
+		.qrcode-text {
+			margin-top: 100px;
+		}
+		.qrcode-text-btn {
+			display:inline-block;
+			background:url(//dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg) 50% 50% no-repeat;
+			height:20em;
+			width:20em;
+			margin-top:50px;
+			cursor:pointer;
+		}
+		.qrcode-text-btn > input[type=file] {
+			position:absolute;
+			overflow:hidden;
+			width:1px;
+			height:1px;
+			opacity:0;
+		}
+	</style>
+	<script type="text/javascript">
+		function openQRCamera(node) {
+		  var reader = new FileReader();
+		  reader.onload = function() {
+		    node.value = "";
+		    qrcode.callback = function(res) {
+		      if(res instanceof Error) {
+		        alert("No QR code found. Please make sure the QR code is within the camera's frame and try again.");
+		      } else {
+		        //node.parentNode.previousElementSibling.value = res;
+		        window.open(res);
+		      }
+		    };
+		    qrcode.decode(reader.result);
+		  };
+		  reader.readAsDataURL(node.files[0]);
+		}
+
+		function showQRIntro() {
+		  return confirm("Use your camera to take a picture of a QR code.");
+		}
+	</script>
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100">
+		  <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+		    <form class="login100-form validate-form" action="" method="post">
+		    	<div style="text-align: center;">
+			    	<h2>Lift QR Scanner</h2>
+					<h6>Click the below image to scan code</h6>
+		    	</div>
+				<!--<input type=text size=16 placeholder="Tracking Code" class=qrcode-text><br>-->
+				<label class=qrcode-text-btn>
+					<input type=file accept="image/*" capture=environment onclick="return showQRIntro();" onchange="openQRCamera(this);" tabindex=-1>
+				</label>
+		    </form>
+		  </div>
+		</div>
+	</div>
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
